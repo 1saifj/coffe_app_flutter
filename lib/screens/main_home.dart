@@ -1,7 +1,9 @@
+import 'package:epos/widgets/bevereges_widget.dart';
+import 'package:epos/widgets/foods_widget.dart';
 import 'package:flutter/material.dart';
 
 class MainView extends StatefulWidget {
-  MainView({Key? key}) : super(key: key);
+  const MainView({Key? key}) : super(key: key);
 
   @override
   State<MainView> createState() => _MainViewState();
@@ -116,196 +118,9 @@ class _MainViewState extends State<MainView> {
                             ]),
                       ),
                       const SizedBox(height: 10),
-                      Container(
-                        height: 180,
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                const Text(
-                                  'Beverages',
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black,
-                                  ),
-                                ),
-                                TextButton(
-                                  onPressed: () {},
-                                  style: TextButton.styleFrom(
-                                      primary: Colors.pinkAccent[100]),
-                                  child: const Text('View All'),
-                                ),
-                              ],
-                            ),
-                            Expanded(
-                                child: GridView.count(
-                              crossAxisCount: 2,
-                              crossAxisSpacing: 16,
-                              mainAxisSpacing: 16,
-                              childAspectRatio: 12 / 4,
-                              children: [
-                                Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.grey[200],
-                                      borderRadius: BorderRadius.circular(32),
-                                    ),
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: const [
-                                        CircleAvatar(
-                                          backgroundColor: Colors.white,
-                                          foregroundColor: Colors.black,
-                                          child: Icon(Icons.coffee),
-                                        ),
-                                        SizedBox(width: 16),
-                                        Text(
-                                          'Signatured',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        )
-                                      ],
-                                    )),
-                                Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.grey[200],
-                                      borderRadius: BorderRadius.circular(32),
-                                    ),
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: const [
-                                        CircleAvatar(
-                                          backgroundColor: Colors.white,
-                                          foregroundColor: Colors.black,
-                                          child: Icon(Icons.coffee),
-                                        ),
-                                        SizedBox(width: 16),
-                                        Text(
-                                          'Iced Coffee',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        )
-                                      ],
-                                    )),
-                                Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.grey[200],
-                                      borderRadius: BorderRadius.circular(32),
-                                    ),
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: const [
-                                        CircleAvatar(
-                                          backgroundColor: Colors.white,
-                                          foregroundColor: Colors.black,
-                                          child: Icon(Icons.coffee),
-                                        ),
-                                        SizedBox(width: 16),
-                                        Text(
-                                          'Hot Chocolate',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        )
-                                      ],
-                                    )),
-                                Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.grey[200],
-                                      borderRadius: BorderRadius.circular(32),
-                                    ),
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: const [
-                                        CircleAvatar(
-                                          backgroundColor: Colors.white,
-                                          foregroundColor: Colors.black,
-                                          child: Icon(Icons.coffee),
-                                        ),
-                                        SizedBox(width: 16),
-                                        Text(
-                                          'espresso',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        )
-                                      ],
-                                    )),
-                                Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.grey[200],
-                                      borderRadius: BorderRadius.circular(32),
-                                    ),
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: const [
-                                        CircleAvatar(
-                                          backgroundColor: Colors.white,
-                                          foregroundColor: Colors.black,
-                                          child: Icon(Icons.coffee),
-                                        ),
-                                        SizedBox(width: 16),
-                                        Text(
-                                          'Signatured',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        )
-                                      ],
-                                    )),
-                                Container(
-                                    decoration: BoxDecoration(
-                                      color: Colors.grey[200],
-                                      borderRadius: BorderRadius.circular(32),
-                                    ),
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 8),
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: const [
-                                        CircleAvatar(
-                                          backgroundColor: Colors.white,
-                                          foregroundColor: Colors.black,
-                                          child: Icon(Icons.coffee),
-                                        ),
-                                        SizedBox(width: 16),
-                                        Text(
-                                          'Signatured',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        )
-                                      ],
-                                    )),
-                              ],
-                            ))
-                          ],
-                        ),
-                      ),
-                      const SizedBox(height: 16),
-                      Container(
-                        height: 200,
-                        color: Colors.blue,
-                      )
+                      const BevergesWidget(),
+                      const SizedBox(height: 10),
+                      const FoodsWidget()
                     ],
                   ),
                 )),
@@ -340,7 +155,7 @@ class _MainViewState extends State<MainView> {
                         icon: const Icon(Icons.wallet_giftcard_outlined),
                         color: Colors.grey,
                       ),
-                      CircleAvatar(
+                      const CircleAvatar(
                         radius: 16,
                       )
                     ],
